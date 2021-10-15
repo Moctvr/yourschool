@@ -11,37 +11,45 @@ const Dataetab ={
             id:1,
             img:esp,
             title:'ESP',
-            desc:'Ecole Superieure Polytechnique de Dakar'
+            desc: 'Ecole Superieure Polytechnique de Dakar',
+            path:'./esp'
         },
         {
             id:2,
             img:ism,
             title:'ISM',
-            desc:'Institut Superieure de Management'
+            desc: 'Institut Superieure de Management',
+            path:'./ism'
+            
         },
         {
             id:3,
             img:iam,
             title:'IAM',
-            desc:'Institut Africaine de Management'
+            desc: 'Institut Africaine de Management',
+            path:'./iam'
+            
         },
         {
             id:4,
             img:esmt,
             title:'ESMT',
-            desc:'Ecole Superieure Multinationale des Telecommunications'
+            desc: 'Ecole Superieure Multinationale des Telecommunications',
+            path:'./esmt'
         },
         {
             id:5,
             img:supdeco,
             title:'SupDeCo',
-            desc:'Groupe Ecole Superieure de Commerce de Dakar'
+            desc: 'Groupe Ecole Superieure de Commerce de Dakar',
+            path:'./supdeco'
         },
         {
             id:6,
             img:ensup,
             title:'ENSUP',
-            desc:'Enseignement Superieur de la Gestion de Finance et des Multimedia'
+            desc: 'Enseignement Superieur de la Gestion de Finance et des Multimedia',
+            path:'./ensup'
         }
 
     ]
