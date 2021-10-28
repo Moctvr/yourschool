@@ -1,28 +1,19 @@
-import React , { useState,useEffect } from "react";
-import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Navbar2 from "./components/Navbar2";
-import Home from "./pages/Home";
-import Supdeco from "./pages/Supdeco";
-import Iam from "./pages/Iam";
-import Ism from "./pages/Ism";
-import Forum from "./pages/Forum";
+import React, { useState,useEffect } from "react";
+import { Link } from "react-router-dom";
+import * as Icons from "react-icons/fa";
+import "./Navbar.css";
+import { navItems } from "./NavItems";
 
-import Etablissements from "./pages/Etablissements";
-import Connexion from "./pages/Connexion";
-
-import Ensup from "./pages/Ensup";
-import Esp from "./pages/Esp";
-import Esmt from "./pages/Esmt";
-import { navItems2 } from "./NavItems"
-import { navItems1 } from "./NavItems"
-import fire from "./components/login/fire";
+import Dropdown from "./Dropdown";
+import logo from '../logo.png'
+import "./Button.css";
+import fire from "./login/fire";
 
 
 
-function App() {
-  const[user,setUser]=useState('');
+
+const Navbar2 = ({ navItems }, { connect }) => {
+    const[user,setUser]=useState('');
     const[email,setEmail]=useState('');
     const[password,setPassword]=useState('');
     const[emailError,setEmailError]=useState('');
@@ -95,34 +86,44 @@ function App() {
   useEffect (() => {
     authListener();
   }, []);
-  const connexion = "connexion"
-  const deconnexion="Deconnexion"
+  const [dropdown, setDropdown] = useState(false);
 
   return (
     <>
-      <BrowserRouter>
-        {user ? (
-          <Navbar2 navItems={navItems2} />
-          ) : (
-            <Navbar navItems={navItems1} />
-          )}
+      <nav className="navbar">
+        <Link to="/" className="navbar-logo">
+          YourSchool
+          <img src={logo} alt='logo' className='logo'/>
+        </Link>
+        <ul className="nav-items">
+          {navItems.map((item) => {
+            if (item.title === "Etablissements") {
+              return (
+                <li
+                  key={item.id}
+                  className={item.cName}
+                  onMouseEnter={() => setDropdown(true)}
+                  onMouseLeave={() => setDropdown(false)}
+                >
+                  <Link to={item.path}>{item.title}</Link>
+                  {dropdown && <Dropdown />}
+                </li>
+              );
+            }
+            return (
+              <li key={item.id} className={item.cName}>
+                <Link to={item.path}>{item.title}</Link>
+              </li>
+            );
+          })}
+        </ul>
         
-        <Switch>
-          <Route path="/" exact component={Home}></Route>          
-          <Route path="/Forum" component={Forum}></Route>
-          <Route path="/etablissements" component={Etablissements}></Route>
-          <Route path="/Connexion" component= {Connexion}></Route>
-          
-          <Route path="/ism" component={Ism}></Route>
-          <Route path="/iam" component={Iam}></Route>
-          <Route path="/supdeco" component={Supdeco}></Route>
-          <Route path="/ensup" component={Ensup}></Route>
-          <Route path="/esp" component={Esp}></Route>
-          <Route path="/esmt" component={Esmt}></Route>
-        </Switch>
-      </BrowserRouter>
+         <Link to="Connexion">
+        <button className="btnc" onClick={handleLogout}>Logout</button>
+        </Link>
+      </nav>
     </>
   );
 }
 
-export default App;
+export default Navbar2;

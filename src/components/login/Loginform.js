@@ -4,6 +4,7 @@ import "./Loginform.css";
 import Login from "./Login";
 import fire from "./fire";
 import Hero from "./Hero";
+import Home from '../../pages/Home';
 
 const Loginform = () => {
     const[user,setUser]=useState('');
@@ -84,7 +85,7 @@ const Loginform = () => {
     return(
         <div className="App">
           {user ?(
-            <Hero handleLogout={handleLogout} />
+            <Home />
           ) : (
             <Login 
         email ={email}

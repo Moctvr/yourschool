@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Button.css";
 
-function Button() {
+function Button({connexion}) {
   return (
     <Link to="Connexion">
-      <button className="btnc">Connexion</button>
+      <button className="btnc">{connexion}</button>
     </Link>
   );
 }
