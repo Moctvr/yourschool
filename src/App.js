@@ -8,6 +8,7 @@ import Supdeco from "./pages/Supdeco";
 import Iam from "./pages/Iam";
 import Ism from "./pages/Ism";
 import Forum from "./pages/Forum";
+import PrendreRDV from "./pages/PrendreRDV";
 
 import Etablissements from "./pages/Etablissements";
 import Connexion from "./pages/Connexion";
@@ -95,8 +96,7 @@ function App() {
   useEffect (() => {
     authListener();
   }, []);
-  const connexion = "connexion"
-  const deconnexion="Deconnexion"
+  
 
   return (
     <>
@@ -108,10 +108,11 @@ function App() {
           )}
         
         <Switch>
-          <Route path="/" exact component={Home}></Route>          
+          <Route path="/"  exact component={Home}></Route>          
           <Route path="/Forum" component={Forum}></Route>
           <Route path="/etablissements" component={Etablissements}></Route>
-          <Route path="/Connexion" component= {Connexion}></Route>
+          <Route path="/Connexion" component={Connexion}></Route>
+          <Route path="/PrendreRDV" component={PrendreRDV}></Route>
           
           <Route path="/ism" component={Ism}></Route>
           <Route path="/iam" component={Iam}></Route>

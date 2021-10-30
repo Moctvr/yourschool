@@ -11,12 +11,7 @@ export  const navItems1 = [
     path: "./etablissements",
     cName: "nav-item",
   },
-  {
-    id: 3,
-    title: "forum",
-    path: "./forum",
-    cName: "nav-item",
-  },
+  
   
     
 ];
@@ -39,12 +34,7 @@ export  const navItems2 = [
     path: "./forum",
     cName: "nav-item",
   },
-  {
-    id: 4,
-    title: "forum++",
-    path: "./forum",
-    cName: "nav-item",
-  },
+ 
     
 ];
 

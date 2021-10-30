@@ -67,16 +67,25 @@
 }
 
 
-  
 
+/*
+socialfollow
+*/
 .social-container {
   background: #eee;
   padding: 25px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
- 
+  vertical-align: text-top;
 }
+  .contact {
+    text-align: left;
+    background: #eee;
+    align-items: left;  
+  }
+
+
 a.social {
   margin: 0 1rem;
   transition: transform 250ms;
@@ -99,4 +108,56 @@ a.twitter {
 
 a.instagram {
   color: black;
+}
+
+/*information ecole*/
+.school{
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: right;
+  font-weight: bold;
+  
+}
+.img {
+	width: 130px;
+	height: 130px;
+  text-align:center;
+  margin:auto;
+  display:flex
+}
+.info{
+  text-align: center;
+}
+.menu {
+	color: rgb(17, 5, 5);
+	background-color: rgba(190, 177, 190, 0.9);
+	padding: 32px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 250px;
+  
+  
+}
+.rdv{
+  text-align: right; 
+}
+.menul{
+  font-size: 0.8em;
+  font-family: Verdana;
+  border: none;
+}
+.menuconn{
+  text-align: center;
+  border:2px solid;
+  border: none;
+  background: transparent;
+  padding: 6px 16px;
+  font-size: 1.1rem;
+  color: rgb(12, 5, 5);
+  background: rgb(0, 212, 212);
+  border-radius: 5px;
+  transition: 0.3s all ease-out;
+  cursor: pointer;
 }
