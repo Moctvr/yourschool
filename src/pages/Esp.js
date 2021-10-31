@@ -7,6 +7,8 @@ import fire from '../components/login/fire';
 
 import "../components/Button.css"
 import Loginform from '../components/login/Loginform';
+import styled from "styled-components";
+
     
 
 
@@ -18,6 +20,22 @@ function Esp() {
     const[passwordError,setPasswordError]=useState('');
     const[hasAccount,setHasAccount]=useState('false');
     
+   const Buttone = styled.button`
+  background-color: ;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: auto;
+  cursor: pointer;
+ height:150px;
+ width:150px;
+ display:flex;
+ justify-content:center
+
+ 
+`;
+  
     const clearInputs = () =>{
       setEmail('');
       setPassword('');
@@ -102,13 +120,14 @@ function Esp() {
         </p> 
       </div> 
       <section className="py-4 container">
-            <div className="row justify-conten-center">
+            <div className="row justify-content-center">
               {EspDatasearch.map((item,index)=>{
                 return(
                   <div className="col-11 col-md-6 col-lg-3 mx-0 mb-4">
                     
                         <Link to={item.path}>
-                            <div className="card p-0 overflow-hidden h-100 shadow">
+                      <div className="card p-0 overflow-hidden h-100 shadow">
+                        <img src={item.img} alt='' className="card-img-top img-fluid" />
                        
                         <div className="card-body">
                             <h5 className="card-title">{item.title}</h5>
@@ -123,13 +142,17 @@ function Esp() {
                     )
               })}
           <div>
+
             {user ? (
-            <Link to="PrendreRDV">
-                <button  onClick={handleLogin} className="btnc">Prendre Rendez VOUS</button>
+              <Link to="PrendreRDV">
+              
+                <Buttone  onClick={handleLogin} className="btnc">Prendre Rendez VOUS</Buttone>
+                
+                
             </Link>
           ) : (
            <Link to="Connexion">
-                <button  onClick={handleLogin} className="btnc">Prendre Rendez VOUS</button>
+               <Buttone  onClick={handleLogin} className="btnc">Prendre Rendez VOUS</Buttone>  
             </Link>
           )}
             

@@ -19,6 +19,12 @@ import Esmt from "./pages/Esmt";
 import { navItems2 } from "./NavItems"
 import { navItems1 } from "./NavItems"
 import fire from "./components/login/fire";
+import dg from "./pages/ESP/dg";
+import dgc from "./pages/ESP/dgc";
+import dgi from "./pages/ESP/dgi";
+import dgm from "./pages/ESP/dgm";
+import dge from "./pages/ESP/dge";
+import dgcba from "./pages/ESP/dgcba";
 
 
 
@@ -120,6 +126,12 @@ function App() {
           <Route path="/ensup" component={Ensup}></Route>
           <Route path="/esp" component={Esp}></Route>
           <Route path="/esmt" component={Esmt}></Route>
+          <Route path="/dg" component={dg}></Route>
+          <Route path="/dgc" component={dgc}></Route>
+          <Route path="/dgi" component={dgi}></Route>
+          <Route path="/dgm" component={dgm}></Route>
+          <Route path="/dge" component={dge}></Route>
+             <Route path="/dgcba" component={dgcba}></Route>
         </Switch>
       </BrowserRouter>
     </>

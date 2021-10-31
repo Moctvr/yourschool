@@ -1,5 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&display=swap");
 
+@import "../node_modules/@syncfusion/ej2-base/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-buttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-calendars/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-dropdowns/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-inputs/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-lists/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-navigations/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-popups/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css";
+@import "../node_modules/@syncfusion/ej2-react-schedule/styles/material.css";
+
 * {
   margin: 0;
   padding: 0;
@@ -160,4 +171,14 @@ a.instagram {
   border-radius: 5px;
   transition: 0.3s all ease-out;
   cursor: pointer;
+}
+.imgi{
+  width: 200px;
+	height: 190px;
+  text-align:center;
+  margin:auto;
+  display:flex;
+  border-radius: 10%;
+
+
 }
