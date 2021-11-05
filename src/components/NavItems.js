@@ -47,3 +47,21 @@ export const serviceDropdown = [
     cName: "submenu-item",
   },
 ];
+
+export  const navItems3 = [
+  {
+    id: 1,
+    title: "Admin",
+    path: "./",
+    cName: "nav-item",
+  },
+  {
+    id: 2,
+    title: "Gerer Page ",
+    path: "./etablissements",
+    cName: "nav-item",
+  },
+  
+  
+    
+];

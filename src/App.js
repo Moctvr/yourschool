@@ -18,6 +18,7 @@ import Esp from "./pages/Esp";
 import Esmt from "./pages/Esmt";
 import { navItems2 } from "./NavItems"
 import { navItems1 } from "./NavItems"
+import { navItems3 } from "./NavItems"
 import fire from "./components/login/fire";
 import dg from "./pages/ESP/dg";
 import dgc from "./pages/ESP/dgc";
@@ -25,6 +26,12 @@ import dgi from "./pages/ESP/dgi";
 import dgm from "./pages/ESP/dgm";
 import dge from "./pages/ESP/dge";
 import dgcba from "./pages/ESP/dgcba";
+import AddRDV from "./pages/Responsable/AddRDV";
+import Gererpage from "./pages/Responsable/Gererpage";
+
+
+
+
 
 
 
@@ -107,11 +114,14 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        {user ? (
-          <Navbar2 navItems={navItems2} />
+        { 
+          user ? (
+          <Navbar2 navItems={navItems3} />
           ) : (
             <Navbar navItems={navItems1} />
-          )}
+            )
+          
+        }
         
         <Switch>
           <Route path="/"  exact component={Home}></Route>          
@@ -131,7 +141,10 @@ function App() {
           <Route path="/dgi" component={dgi}></Route>
           <Route path="/dgm" component={dgm}></Route>
           <Route path="/dge" component={dge}></Route>
-             <Route path="/dgcba" component={dgcba}></Route>
+          <Route path="/dgcba" component={dgcba}></Route>
+          <Route path="/addrdv" component={AddRDV}></Route>
+          <Route path="/gererpage" component={Gererpage}></Route>
+
         </Switch>
       </BrowserRouter>
     </>

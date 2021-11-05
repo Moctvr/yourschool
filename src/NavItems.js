@@ -37,6 +37,23 @@ export  const navItems2 = [
  
     
 ];
+export  const navItems3 = [
+  {
+    id: 1,
+    title: "Gerer Page ",
+    path: "./gererpage",
+    cName: "nav-item",
+  },
+  {
+    id: 2,
+    title: "Rendez Vous",
+    path: "./addrdv",
+    cName: "nav-item",
+  },
+  
+  
+    
+];
 
 export const serviceDropdown = [
   {
